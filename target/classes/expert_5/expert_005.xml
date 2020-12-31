@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="koreatire" class="expert_5.KoreaTire"></bean>
+<bean id="americatire" class="expert_5.AmericaTire"></bean>
+<bean id="francetire" class="expert_5.FranceTire"></bean>
+
+<bean id="car" class="expert_5.Car">
+	<property name="tire" ref="francetire"></property>
+	<!-- 스프링을 통한 의존성 주입 - 스프링 설정파일(XML)에서 속성 주입 -->
+</bean>
+
+</beans>
